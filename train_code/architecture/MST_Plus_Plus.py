@@ -186,6 +186,7 @@ class MSAB(nn.Module):
         return out
 
 class MST(nn.Module):
+    # MST==SST(Single-stage Spectral-wise Transformer) 
     def __init__(self, in_dim=31, out_dim=31, dim=31, stage=2, num_blocks=[2,4,4]):
         super(MST, self).__init__()
         self.dim = dim
@@ -268,6 +269,7 @@ class MST(nn.Module):
         return out
 
 class MST_Plus_Plus(nn.Module):
+    # stage, N_s = 3 ==> MST==SST(Single-stage Spectral-wise Transformer) 
     def __init__(self, in_channels=3, out_channels=31, n_feat=31, stage=3):
         super(MST_Plus_Plus, self).__init__()
         self.stage = stage
